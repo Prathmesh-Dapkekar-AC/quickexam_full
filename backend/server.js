@@ -51,3 +51,5 @@ initSweeperJob();
 app.listen(PORT, () => {
   console.log(`QuickExam server running on port ${PORT}`);
 });
+
+module.exports = app;
