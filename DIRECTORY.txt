@@ -1,0 +1,74 @@
+quickexam/
+├── DIRECTORY.txt
+├── README.md
+├── .gitignore
+│
+├── backend/
+│   ├── .env
+│   ├── package.json
+│   ├── server.js
+│   └── src/
+│       ├── config/
+│       │   └── db.js
+│       ├── models/
+│       │   ├── User.js
+│       │   ├── Exam.js
+│       │   ├── Question.js
+│       │   └── Attempt.js
+│       ├── middleware/
+│       │   ├── auth.js
+│       │   └── validate.js
+│       ├── controllers/
+│       │   ├── authController.js
+│       │   ├── examController.js
+│       │   └── attemptController.js
+│       ├── routes/
+│       │   ├── authRoutes.js
+│       │   ├── examRoutes.js
+│       │   └── attemptRoutes.js
+│       └── jobs/
+│           └── sweeper.js
+│
+└── frontend/
+    ├── .env
+    ├── index.html
+    ├── package.json
+    ├── vite.config.js
+    ├── tailwind.config.js
+    └── src/
+        ├── index.css
+        ├── main.jsx
+        ├── App.jsx
+        ├── api/
+        │   └── client.js
+        ├── context/
+        │   └── AuthContext.jsx
+        ├── components/
+        │   ├── ui/
+        │   │   ├── button.jsx
+        │   │   ├── card.jsx
+        │   │   ├── dialog.jsx
+        │   │   ├── badge.jsx
+        │   │   └── alert.jsx
+        │   ├── common/
+        │   │   ├── Navbar.jsx
+        │   │   ├── Footer.jsx
+        │   │   └── ProtectedRoute.jsx
+        │   ├── exam/
+        │   │   ├── CountdownTimer.jsx
+        │   │   ├── QuestionCard.jsx
+        │   │   ├── QuestionPalette.jsx
+        │   │   └── ViolationToast.jsx
+        │   └── teacher/
+        │       ├── QuestionForm.jsx
+        │       └── RosterTable.jsx
+        └── pages/
+            ├── Home.jsx
+            ├── Login.jsx
+            ├── Register.jsx
+            ├── AboutUs.jsx
+            ├── ContactUs.jsx
+            ├── StudentDashboard.jsx
+            ├── ExamRoom.jsx
+            ├── ResultScorecard.jsx
+            └── TeacherDashboard.jsx
