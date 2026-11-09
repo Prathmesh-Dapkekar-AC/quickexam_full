@@ -161,7 +161,7 @@ export const Register = () => {
             <input
               type="password"
               required
-              minLength={6}  /* HTML5 native validation fallback */
+             // minLength={6}  /* HTML5 native validation fallback */
               value={password}
               onChange={e => {
                 setPassword(e.target.value);
@@ -172,7 +172,7 @@ export const Register = () => {
             />
             {password.length > 0 && password.length < 6 && (
               <p className="text-[11px] text-amber-600 mt-1">
-                Password 6 characters se chhota hai ({password.length}/6)
+                Password should at least contain 6 characters! ({password.length}/6)
               </p>
             )}
           </div>
