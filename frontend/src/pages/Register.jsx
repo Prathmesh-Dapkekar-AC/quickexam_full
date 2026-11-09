@@ -103,7 +103,7 @@ export const Register = () => {
 
     // 1. Frontend validation: 6 characters se kam par turant warning dena
     if (password.length < 6) {
-      setError('Password kam se kam 6 characters ka hona chahiye!');
+      setError('Password should at least contain 6 characters!');
       return;
     }
 
