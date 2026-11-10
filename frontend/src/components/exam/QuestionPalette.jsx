@@ -1,22 +1,32 @@
-import React from 'react';
+import React from "react";
 
-export const QuestionPalette = ({ questions, answers, currentIndex, onSelectQuestion }) => {
+export const QuestionPalette = ({
+  questions,
+  answers,
+  currentIndex,
+  onSelectQuestion,
+}) => {
   return (
     <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-xs">
-      <h4 className="text-sm font-semibold text-slate-900 mb-4">Question Overview</h4>
-      
+      <h4 className="text-sm font-semibold text-slate-900 mb-4">
+        Question Overview
+      </h4>
+
       <div className="grid grid-cols-5 gap-2">
         {questions.map((q, idx) => {
-          const ans = answers.find(a => a.question === q._id);
-          const isAnswered = ans && ans.selectedIndex !== null && ans.selectedIndex !== undefined;
+          const ans = answers.find((a) => a.question === q._id);
+          const isAnswered =
+            ans &&
+            ans.selectedIndex !== null &&
+            ans.selectedIndex !== undefined;
           const isReview = ans && ans.markedForReview;
           const isCurrent = currentIndex === idx;
 
-          let badgeColor = 'bg-slate-100 text-slate-700 border-slate-200';
+          let badgeColor = "bg-slate-100 text-slate-700 border-slate-200";
           if (isReview) {
-            badgeColor = 'bg-amber-400 text-white border-amber-500 font-bold';
+            badgeColor = "bg-amber-400 text-white border-amber-500 font-bold";
           } else if (isAnswered) {
-            badgeColor = 'bg-emerald-600 text-white border-emerald-700';
+            badgeColor = "bg-emerald-600 text-white border-emerald-700";
           }
 
           return (
@@ -24,7 +34,9 @@ export const QuestionPalette = ({ questions, answers, currentIndex, onSelectQues
               key={q._id}
               onClick={() => onSelectQuestion(idx)}
               className={`h-9 w-9 rounded-lg text-xs font-semibold flex items-center justify-center border transition-transform ${badgeColor} ${
-                isCurrent ? 'ring-2 ring-indigo-600 ring-offset-2 scale-105' : ''
+                isCurrent
+                  ? "ring-2 ring-indigo-600 ring-offset-2 scale-105"
+                  : ""
               }`}
             >
               {idx + 1}

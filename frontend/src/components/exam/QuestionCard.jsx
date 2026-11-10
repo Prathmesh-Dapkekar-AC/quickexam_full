@@ -1,6 +1,13 @@
-import React from 'react';
+import React from "react";
 
-export const QuestionCard = ({ question, index, selectedOption, onSelectOption, isMarkedForReview, onToggleReview }) => {
+export const QuestionCard = ({
+  question,
+  index,
+  selectedOption,
+  onSelectOption,
+  isMarkedForReview,
+  onToggleReview,
+}) => {
   return (
     <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-xs select-none">
       <div className="flex items-start justify-between gap-4 mb-4">
@@ -16,11 +23,11 @@ export const QuestionCard = ({ question, index, selectedOption, onSelectOption, 
           onClick={onToggleReview}
           className={`text-xs font-semibold px-3 py-1.5 rounded-lg border transition-all ${
             isMarkedForReview
-              ? 'bg-amber-500 text-white border-amber-600'
-              : 'bg-slate-50 text-slate-600 border-slate-300 hover:bg-slate-100'
+              ? "bg-amber-500 text-white border-amber-600"
+              : "bg-slate-50 text-slate-600 border-slate-300 hover:bg-slate-100"
           }`}
         >
-          {isMarkedForReview ? 'Marked for Review' : 'Mark for Review'}
+          {isMarkedForReview ? "Marked for Review" : "Mark for Review"}
         </button>
       </div>
 
@@ -32,8 +39,8 @@ export const QuestionCard = ({ question, index, selectedOption, onSelectOption, 
               key={optIdx}
               className={`flex items-center p-3.5 rounded-lg border cursor-pointer transition-colors ${
                 isSelected
-                  ? 'border-indigo-600 bg-indigo-50/70 text-indigo-900 font-medium'
-                  : 'border-slate-200 hover:bg-slate-50 text-slate-700'
+                  ? "border-indigo-600 bg-indigo-50/70 text-indigo-900 font-medium"
+                  : "border-slate-200 hover:bg-slate-50 text-slate-700"
               }`}
             >
               <input
